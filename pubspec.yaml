@@ -17,6 +17,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:  
+    - assets/image/AirPods2dagen.jpg
+    - assets/image/AirPods3ragen.jpg
+    - assets/image/AirPodsMax.jpg
+    - assets/image/iPad1.jpg
+    - assets/image/iPadAir2.jpg
+
+# voy
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg

@@ -3,40 +3,218 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
       title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+        title: Text('Estefania Sanchez'),
+        backgroundColor: Colors.green,
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            print('Menú presionado');
+          },
         ),
+      ),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Buscar',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 8.0),
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: FractionallySizedBox(
+                widthFactor: 1.0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/image/iPadAir2.jpg"),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          ListTile(
+            title: Text(
+              'Los mejores productos',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 35.5,
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Card(
+                  elevation: 10,
+                  child: ListTile(
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/image/AirPods2dagen.jpg',
+                          width: double.infinity,
+                          height: 135,
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'AirPods De Segunda Generacion',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Card(
+                  elevation: 10,
+                  child: ListTile(
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/image/AirPods3ragen.jpg',
+                          width: double.infinity,
+                          height: 160,
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          'Airpods De Tercera Generacion',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Card(
+                  elevation: 10,
+                  child: ListTile(
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/image/AirPodsMax.jpg',
+                          width: double.infinity,
+                          height: 170,
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'AirPods Max',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Card(
+                  elevation: 10,
+                  child: ListTile(
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                          'assets/image/iPad1.jpg',
+                          width: double.infinity,
+                          height: 150,
+                          fit: BoxFit.contain,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'Ipad De Primera Generacion',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                            Icon(Icons.star, color: Colors.yellow, size: 20),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
