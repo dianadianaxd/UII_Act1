@@ -20,4 +20,6 @@ samples, guidance on mobile development, and a full API reference.
 - Haydee Esmeralda Jimenez Guevara
 - RESULTADOS
 - ![image](https://github.com/dianadianaxd/UII_Act1/assets/159160020/de1307ca-55b8-439d-9c4b-13731264bfa7)
+- ![image](https://github.com/dianadianaxd/UII_Act1/assets/159160020/bd92d814-101c-46a5-8a6f-a2d21d322ef9)
+
 
